@@ -1,0 +1,45 @@
+@CHARSET "ISO-8859-1";
+
+.center {
+	width: 100%;
+}
+
+.center .title{
+	width: 100%;
+	text-align: center;
+	font-size: 35px;
+	border-bottom: 1px solid #aaa;
+    padding: 10px 0px 10px 0px;
+    background: #ccc;
+    line-height: 35px;
+}
+
+.center .form {
+	width: 100%;
+	text-align: center;
+	display: inline-block;
+}
+
+.center .form .form_table {
+	width: 500px;
+	height: 300px;
+	border: 1px solid #aaa;
+	display: inline-block;
+	margin-top: 30px;
+}
+
+.center .form .form_table table tr td {
+	height: 35px;
+	display: inline-block;
+	padding-top: 5px;
+}
+
+.center .form .form_table table tr .td_title {
+	width: 150px;
+	text-align: center;
+	padding-top: 10px;
+}
+
+.center .form .form_table table tr .td_content {
+	width: 345px;
+}
