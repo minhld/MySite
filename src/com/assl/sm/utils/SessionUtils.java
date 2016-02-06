@@ -1,4 +1,4 @@
-package nsoft.xpubweb.utils;
+package com.assl.sm.utils;
 
 import javax.servlet.http.HttpServletRequest;
 

@@ -17,7 +17,7 @@
     	<property name="location" value="/WEB-INF/conf/service.properties"/>
 	</bean>
 
-	<bean id="configObjectBean" class="nsoft.xpubweb.utils.ConfigObject">
+	<bean id="configObjectBean" class="com.assl.sm.utils.ConfigObject">
 	    <property name="serverName" value="${server.name}"/>
 	</bean>
 

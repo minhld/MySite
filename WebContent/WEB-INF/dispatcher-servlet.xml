@@ -22,9 +22,6 @@
 	<!-- to provide annotation to support, for ex. @Controller -->
 	<annotation-driven />
 	
-	<!-- to compile all classes inside base-package -->
-	<context:component-scan base-package="nsoft.xpubweb.controller.social" />
-	
 	<!-- to relocate the static resources to specific folders -->
 	<mvc:resources mapping="/css/**" location="/css/" />
 	<mvc:resources mapping="/js/**" location="/js/" />
@@ -48,7 +45,7 @@
 		</beans:property>
 	</beans:bean>
 		
-	<beans:bean id="mainManager" class="nsoft.xpubweb.controller.manager.MainManager" />
+	<beans:bean id="mainManager" class="com.assl.sm.manager.MainManager" />
 		
 	
 </beans:beans>

@@ -1,4 +1,4 @@
-package nsoft.xpubweb.controller.manager;
+package com.assl.sm.manager;
 
 import java.io.BufferedReader;
 import java.io.InputStreamReader;
@@ -10,9 +10,6 @@ import java.util.List;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
-
-import nsoft.xpubweb.utils.Constant;
-import nsoft.xpubweb.utils.Utils;
 
 import org.apache.http.HttpResponse;
 import org.apache.http.NameValuePair;
@@ -26,6 +23,9 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
+
+import com.assl.sm.utils.Constant;
+import com.assl.sm.utils.Utils;
 
 @SuppressWarnings({"deprecation"})
 public class MainManager {

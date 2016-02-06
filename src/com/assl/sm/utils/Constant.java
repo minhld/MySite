@@ -1,4 +1,4 @@
-package nsoft.xpubweb.utils;
+package com.assl.sm.utils;
 
 import java.text.SimpleDateFormat;
 
