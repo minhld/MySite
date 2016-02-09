@@ -10,7 +10,9 @@
 	<link rel="stylesheet" href="css/bootstrap.min.css"/>
 	<link rel="stylesheet" href="css/sm.css"/>
 	
-	
+	<script type="text/javascript" src="js/jquery.js"></script>
+	<script type="text/javascript" src="js/jquery.form.js"></script>
+	<script type="text/javascript" src="js/common.js"></script>
 </head>
 	
 <body>
@@ -21,19 +23,20 @@
 				<table>
 				<tbody>
 					<tr><td class="td_title">
-						Name of service:
+						Name of service
 					</td><td class="td_content">
 						<input type="text" placeholder="Enter the name of service"/>
 					</td></tr>
 					<tr><td class="td_title">
-						Select file:
+						Select file
 					</td><td class="td_content">
 						<input type="file" />
 					</td></tr>
 					<tr><td class="td_title">
-						Select file:
+						
 					</td><td class="td_content">
-						<input type="file" />
+						<input type="button" value="Clear" onclick="coreLibs.clearForm();"/>&nbsp;&nbsp;
+						<input type="submit" value="Insert"/>
 					</td></tr>
 				</tbody>
 				</table>

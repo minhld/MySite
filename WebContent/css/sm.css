@@ -22,10 +22,11 @@
 
 .center .form .form_table {
 	width: 500px;
-	height: 300px;
+	height: 150px;
 	border: 1px solid #aaa;
 	display: inline-block;
 	margin-top: 30px;
+	padding: 15px;
 }
 
 .center .form .form_table table tr td {
@@ -36,10 +37,24 @@
 
 .center .form .form_table table tr .td_title {
 	width: 150px;
-	text-align: center;
-	padding-top: 10px;
+	text-align: right;
+	padding: 10px 10px 0px 0px;
 }
 
 .center .form .form_table table tr .td_content {
-	width: 345px;
+	width: 335px;
+	text-align: left;
+}
+
+
+.center .form .form_table table tr .td_content input[type="button"] {
+	width: 80px;
+	background: #eee;
+	border: 1px solid #999;
+}
+
+.center .form .form_table table tr .td_content input[type="submit"] {
+	width: 80px;
+	background: #ccc;
+	border: 1px solid #999;
 }
