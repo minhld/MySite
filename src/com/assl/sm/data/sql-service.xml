@@ -3,38 +3,44 @@
 	PUBLIC "-//ibatis.apache.org//DTD SQL Map 2.0//EN"
 	"http://ibatis.apache.org/dtd/sql-map-2.dtd">
 	
-<sqlMap namespace="search">
-    <typeAlias type="com.nsoft.xpub.objects.SearchParameters" alias="searchParam"/>
-
-    <parameterMap class="java.util.Map" id="search_multi_params">
-        <parameter property="bookId" javaType="list" mode="IN"/>
-        <parameter property="offset" javaType="java.lang.Integer" mode="IN"/>
-        <parameter property="length" javaType="java.lang.Integer" mode="IN"/>
-    </parameterMap>
+<sqlMap namespace="service">
+	<typeAlias type="com.assl.sm.manager.Service" alias="service"/>
+	private String ;
+	private String ;
+	private String ;
+	private String ;
+	private String ;
+	private Date ;
+	
+	<resultMap class="service" id="serviceResult">
+        <result property="serviceId" column="serviceId" jdbcType="VARCHAR"/>
+        <result property="serviceName" column="serviceName" jdbcType="VARCHAR"/>
+        <result property="serviceUrl" column="serviceUrl" jdbcType="VARCHAR"/>
+        <result property="serviceOwner" column="serviceOwner" jdbcType="VARCHAR"/>
+        <result property="description" column="description" jdbcType="VARCHAR"/>
+        <result property="createDate" column="createDate" jdbcType="TIMESTAMP"/>
+    </resultMap>>
     
-   	<select id="searchUsers" resultMap="user.result" parameterMap="search_multi_params">
+   	<select id="getService" resultMap="serviceResult" parameterClass="java.lang.String">
   	    select distinct
-  	    	u.*,
-  	    	(select p.provider as provider_name
-        		from providers as p 
-        		where p.provider_id=u.provider_id) as provider_name,
-        	(select ui.identifier_id 
-        		from user_identifiers as ui 
-        		where ui.user_id=u.user_id) as identifier_id,
-        	(select count(*) 
-        		from user_relations as ur 
-        		where ur.user_id='' and 
-        			ur.partner_id=u.user_id) as is_friend
+  	    	*
   	    from 
-  	    	users as u
+  	    	services
   	    where
-	  	    <iterate conjunction=" and " property="list">
-        		u.user_name like #list[]# 
-			</iterate>
-  	    limit
-  	    	#offset:INT#,#length:INT#
+  	    	serviceId = #serviceId:VARCHAR#
   	</select> 
-    
+
+	<select id="searchServices" resultMap="serviceResult" parameterClass="java.lang.String">
+  	    select distinct
+  	    	*
+  	    from 
+  	    	services
+  	    where
+  	    	serviceName like %#names:VARCHAR#%
+  	    order by createDate;
+  	</select> 
+   	
+   	   	
     <!--  
    	<select id="searchBooks" resultMap="book.result" parameterClass="searchParam">
   	    select distinct 
