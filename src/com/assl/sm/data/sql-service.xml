@@ -1,0 +1,452 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE sqlMap
+	PUBLIC "-//ibatis.apache.org//DTD SQL Map 2.0//EN"
+	"http://ibatis.apache.org/dtd/sql-map-2.dtd">
+	
+<sqlMap namespace="search">
+    <typeAlias type="com.nsoft.xpub.objects.SearchParameters" alias="searchParam"/>
+
+    <parameterMap class="java.util.Map" id="search_multi_params">
+        <parameter property="bookId" javaType="list" mode="IN"/>
+        <parameter property="offset" javaType="java.lang.Integer" mode="IN"/>
+        <parameter property="length" javaType="java.lang.Integer" mode="IN"/>
+    </parameterMap>
+    
+   	<select id="searchUsers" resultMap="user.result" parameterMap="search_multi_params">
+  	    select distinct
+  	    	u.*,
+  	    	(select p.provider as provider_name
+        		from providers as p 
+        		where p.provider_id=u.provider_id) as provider_name,
+        	(select ui.identifier_id 
+        		from user_identifiers as ui 
+        		where ui.user_id=u.user_id) as identifier_id,
+        	(select count(*) 
+        		from user_relations as ur 
+        		where ur.user_id='' and 
+        			ur.partner_id=u.user_id) as is_friend
+  	    from 
+  	    	users as u
+  	    where
+	  	    <iterate conjunction=" and " property="list">
+        		u.user_name like #list[]# 
+			</iterate>
+  	    limit
+  	    	#offset:INT#,#length:INT#
+  	</select> 
+    
+    <!--  
+   	<select id="searchBooks" resultMap="book.result" parameterClass="searchParam">
+  	    select distinct 
+			b.*,
+			(select booktype_name from book_types as bt where bt.id=b.book_type_id) as book_type_name,
+	        (select category_name from categories as c where c.id=b.category_id) as category_name,
+	        (select user_name from users as usr where usr.user_id=b.author_id) as author_name,
+	        (select user_portrait from users as usr where usr.user_id=b.author_id) as author_portrait,
+	        (select user_name from users as usr where usr.user_id=b.modify_author_id) as modify_author_name,
+	        (select language_name from languages as l where l.id=b.language_id) as language_name,
+	        (select folder_name from folders as f where f.folder_id=b.folder_id) as folder_name,
+	        (select status from book_status as st where st.id=b.book_status_id) as book_status_name 
+		from 
+			books as b,
+			book_contents as bc
+		where 
+			(b.book_id=bc.book_id)
+			and (
+			match(b.title,b.description) 
+				against (#query:VARCHAR# in boolean mode) 
+			or
+			match(bc.content_title,bc.contents) 
+				against (#query:VARCHAR# in boolean mode)
+			)
+		order by
+			b.create_date desc
+		limit
+			#offset:INT#,#length:INT#
+  	</select> 
+  	-->
+  	
+   	<select id="searchBooks" resultMap="book.result" parameterClass="searchParam">
+  	    select distinct 
+			b.*,
+			(select booktype_name from book_types as bt where bt.id=b.book_type_id) as book_type_name,
+	        (select category_name from categories as c where c.id=b.category_id) as category_name,
+	        (select user_name from users as usr where usr.user_id=b.author_id) as author_name,
+	        (select user_portrait from users as usr where usr.user_id=b.author_id) as author_portrait,
+	        (select user_name from users as usr where usr.user_id=b.modify_author_id) as modify_author_name,
+	        (select language_name from languages as l where l.id=b.language_id) as language_name,
+	        (select folder_name from folders as f where f.folder_id=b.folder_id) as folder_name,
+	        (select status from book_status as st where st.id=b.book_status_id) as book_status_name 
+		from 
+			books as b
+		where 
+			<![CDATA[
+        	b.abuse_count < 5 and
+        	]]>
+			match(b.title,b.description) 
+				against (#query:VARCHAR# in boolean mode) 
+		order by
+			b.create_date desc
+		limit
+			#offset:INT#,#length:INT#
+  	</select> 
+  	
+  	<!--
+   	<select id="searchBooksByUser" resultMap="book.result" parameterClass="searchParam">
+  	    select distinct 
+			b.*,
+			(select booktype_name from book_types as bt where bt.id=b.book_type_id) as book_type_name,
+	        (select category_name from categories as c where c.id=b.category_id) as category_name,
+	        (select user_name from users as usr where usr.user_id=b.author_id) as author_name,
+	        (select user_portrait from users as usr where usr.user_id=b.author_id) as author_portrait,
+	        (select user_name from users as usr where usr.user_id=b.modify_author_id) as modify_author_name,
+	        (select language_name from languages as l where l.id=b.language_id) as language_name,
+	        (select folder_name from folders as f where f.folder_id=b.folder_id) as folder_name,
+	        (select status from book_status as st where st.id=b.book_status_id) as book_status_name 
+		from 
+			books as b,
+			book_contents as bc
+		where 
+			(b.book_id=bc.book_id)
+			and	(b.author_id=#userId:VARCHAR#)
+			and (
+			match(b.title,b.description) 
+				against (#query:VARCHAR# in boolean mode) 
+			or
+			match(bc.content_title,bc.contents) 
+				against (#query:VARCHAR# in boolean mode)
+			)
+		order by
+			b.create_date desc
+		limit
+			#offset:INT#,#length:INT#
+  	</select>
+  	--> 
+  	<select id="searchBooksByUser" resultMap="book.result" parameterClass="searchParam">
+  	    select distinct 
+			b.*,
+			(select booktype_name from book_types as bt where bt.id=b.book_type_id) as book_type_name,
+	        (select category_name from categories as c where c.id=b.category_id) as category_name,
+	        (select user_name from users as usr where usr.user_id=b.author_id) as author_name,
+	        (select user_portrait from users as usr where usr.user_id=b.author_id) as author_portrait,
+	        (select user_name from users as usr where usr.user_id=b.modify_author_id) as modify_author_name,
+	        (select language_name from languages as l where l.id=b.language_id) as language_name,
+	        (select folder_name from folders as f where f.folder_id=b.folder_id) as folder_name,
+	        (select status from book_status as st where st.id=b.book_status_id) as book_status_name 
+		from 
+			books as b
+		where 
+			b.author_id=#userId:VARCHAR# and 
+			<![CDATA[
+        	b.abuse_count < 5 and
+        	]]>
+			match(b.title,b.description) 
+				against (#query:VARCHAR# in boolean mode) 
+		order by
+			b.create_date desc
+		limit
+			#offset:INT#,#length:INT#
+  	</select> 
+  	
+  	<!--  
+   	<select id="searchBooksStatusLimit" resultMap="book.result" parameterClass="searchParam">
+  	    select distinct 
+			b.*,
+			(select booktype_name from book_types as bt where bt.id=b.book_type_id) as book_type_name,
+	        (select category_name from categories as c where c.id=b.category_id) as category_name,
+	        (select user_name from users as usr where usr.user_id=b.author_id) as author_name,
+	        (select user_portrait from users as usr where usr.user_id=b.author_id) as author_portrait,
+	        (select user_name from users as usr where usr.user_id=b.modify_author_id) as modify_author_name,
+	        (select language_name from languages as l where l.id=b.language_id) as language_name,
+	        (select folder_name from folders as f where f.folder_id=b.folder_id) as folder_name,
+	        (select status from book_status as st where st.id=b.book_status_id) as book_status_name 
+		from 
+			books as b,
+			book_contents as bc
+		where 
+			(b.book_id=bc.book_id)
+			and (b.book_status_id=6)
+			and (
+			match(b.title,b.description) 
+				against (#query:VARCHAR# in boolean mode) 
+			or
+			match(bc.content_title,bc.contents) 
+				against (#query:VARCHAR# in boolean mode)
+			)
+		order by
+			b.create_date desc
+		limit
+			#offset:INT#,#length:INT#
+  	</select>
+  	-->
+  	
+  	<!--   
+   	<select id="searchBooksStatusLimit" resultMap="book.result" parameterClass="searchParam">
+  	    select distinct 
+			b.*,
+			(select booktype_name from book_types as bt where bt.id=b.book_type_id) as book_type_name,
+	        (select category_name from categories as c where c.id=b.category_id) as category_name,
+	        (select user_name from users as usr where usr.user_id=b.author_id) as author_name,
+	        (select user_portrait from users as usr where usr.user_id=b.author_id) as author_portrait,
+	        (select user_name from users as usr where usr.user_id=b.modify_author_id) as modify_author_name,
+	        (select language_name from languages as l where l.id=b.language_id) as language_name,
+	        (select folder_name from folders as f where f.folder_id=b.folder_id) as folder_name,
+	        (select status from book_status as st where st.id=b.book_status_id) as book_status_name 
+		from 
+			books as b
+		where 
+			b.book_status_id=6 and
+			<![CDATA[
+        	b.abuse_count < 5 and
+        	]]> 
+			match(b.title,b.description) 
+				against (#query:VARCHAR# in boolean mode) 
+		order by
+			b.create_date desc
+		limit
+			#offset:INT#,#length:INT#
+  	</select> 
+	-->
+	
+   	<select id="searchBooksStatusLimit" resultMap="book.result" parameterMap="search_multi_params">
+  	    select distinct 
+			b.*,
+			(select booktype_name from book_types as bt where bt.id=b.book_type_id) as book_type_name,
+	        (select category_name from categories as c where c.id=b.category_id) as category_name,
+	        (select user_name from users as usr where usr.user_id=b.author_id) as author_name,
+	        (select user_portrait from users as usr where usr.user_id=b.author_id) as author_portrait,
+	        (select user_name from users as usr where usr.user_id=b.modify_author_id) as modify_author_name,
+	        (select language_name from languages as l where l.id=b.language_id) as language_name,
+	        (select folder_name from folders as f where f.folder_id=b.folder_id) as folder_name,
+	        (select status from book_status as st where st.id=b.book_status_id) as book_status_name 
+		from 
+			books as b
+		where 
+			b.book_status_id=6 and
+			<![CDATA[
+        	b.abuse_count < 5 and
+        	]]> 
+			<iterate conjunction=" and " property="list">
+        		(b.title like #list[]# or b.description like #list[]#) 
+			</iterate>
+		order by
+			b.create_date desc
+		limit
+			#offset#,#length#
+  	</select> 
+
+	<!--  
+	<select id="searchBooksStatusLimitByUser" resultMap="book.result" parameterClass="searchParam">
+  	    select distinct 
+			b.*,
+			(select booktype_name from book_types as bt where bt.id=b.book_type_id) as book_type_name,
+	        (select category_name from categories as c where c.id=b.category_id) as category_name,
+	        (select user_name from users as usr where usr.user_id=b.author_id) as author_name,
+	        (select user_portrait from users as usr where usr.user_id=b.author_id) as author_portrait,
+	        (select user_name from users as usr where usr.user_id=b.modify_author_id) as modify_author_name,
+	        (select language_name from languages as l where l.id=b.language_id) as language_name,
+	        (select folder_name from folders as f where f.folder_id=b.folder_id) as folder_name,
+	        (select status from book_status as st where st.id=b.book_status_id) as book_status_name 
+		from 
+			books as b,
+			book_contents as bc
+		where 
+			(b.book_id=bc.book_id)
+			and (b.author_id=#userId:VARCHAR#)
+			and (b.book_status_id=6)
+			and (
+			match(b.title,b.description) 
+				against (#query:VARCHAR# in boolean mode) 
+			or
+			match(bc.content_title,bc.contents) 
+				against (#query:VARCHAR# in boolean mode)
+			)
+		order by
+			b.create_date desc
+		limit
+			#offset:INT#,#length:INT#
+  	</select>
+  	--> 
+   	<select id="searchBooksStatusLimitByUser" resultMap="book.result" parameterClass="searchParam">
+  	    select distinct 
+			b.*,
+			(select booktype_name from book_types as bt where bt.id=b.book_type_id) as book_type_name,
+	        (select category_name from categories as c where c.id=b.category_id) as category_name,
+	        (select user_name from users as usr where usr.user_id=b.author_id) as author_name,
+	        (select user_portrait from users as usr where usr.user_id=b.author_id) as author_portrait,
+	        (select user_name from users as usr where usr.user_id=b.modify_author_id) as modify_author_name,
+	        (select language_name from languages as l where l.id=b.language_id) as language_name,
+	        (select folder_name from folders as f where f.folder_id=b.folder_id) as folder_name,
+	        (select status from book_status as st where st.id=b.book_status_id) as book_status_name 
+		from 
+			books as b
+		where 
+			b.author_id=#userId:VARCHAR# and
+			b.book_status_id=6 and 
+			<![CDATA[
+        	b.abuse_count < 5 and
+        	]]>
+			match(b.title,b.description) 
+				against (#query:VARCHAR# in boolean mode) 
+		order by
+			b.create_date desc
+		limit
+			#offset:INT#,#length:INT#
+  	</select> 
+
+	<!--     	
+   	<select id="searchBooksFromUserLimitByStatusAndField" resultMap="book.result" parameterClass="searchParam">
+  	    select distinct 
+			b.*,
+			(select booktype_name from book_types as bt where bt.id=b.book_type_id) as book_type_name,
+	        (select category_name from categories as c where c.id=b.category_id) as category_name,
+	        (select user_name from users as usr where usr.user_id=b.author_id) as author_name,
+	        (select user_portrait from users as usr where usr.user_id=b.author_id) as author_portrait,
+	        (select user_name from users as usr where usr.user_id=b.modify_author_id) as modify_author_name,
+	        (select language_name from languages as l where l.id=b.language_id) as language_name,
+	        (select folder_name from folders as f where f.folder_id=b.folder_id) as folder_name,
+	        (select status from book_status as st where st.id=b.book_status_id) as book_status_name 
+		from 
+			books as b,
+			book_contents as bc
+		where 
+			(b.book_id=bc.book_id)
+			and (b.author_id=#userId:VARCHAR#)
+			<isEqual property="bookStatus" compareValue="3">
+			<![CDATA[
+			and (b.book_status_id <= 3)
+			]]>
+			</isEqual>
+			<isEqual property="bookStatus" compareValue="6">
+			<![CDATA[
+			and (b.book_status_id >= 6)
+			]]>
+			</isEqual>
+			<isEqual property="bookStatus" compareValue="0">
+			<![CDATA[
+			and (b.book_status_id > 0)
+			]]>
+			</isEqual>
+			<isEqual property="fieldIndex" compareValue="1">
+			and match(b.title) 
+				against (#query:VARCHAR# in boolean mode) 
+			</isEqual>
+			<isEqual property="fieldIndex" compareValue="2">
+			and match(b.description) 
+				against (#query:VARCHAR# in boolean mode) 
+			</isEqual>
+			<isEqual property="fieldIndex" compareValue="3">
+			and match(bc.contents) 
+				against (#query:VARCHAR# in boolean mode) 
+			</isEqual>
+		order by
+			b.create_date desc
+		limit
+			#offset:INT#,#length:INT#
+  	</select>
+  	-->
+  	
+   	<select id="searchBooksFromUserLimitByStatusAndField" resultMap="book.result" parameterClass="searchParam">
+  	    select distinct 
+			b.*,
+			(select booktype_name from book_types as bt where bt.id=b.book_type_id) as book_type_name,
+	        (select category_name from categories as c where c.id=b.category_id) as category_name,
+	        (select user_name from users as usr where usr.user_id=b.author_id) as author_name,
+	        (select user_portrait from users as usr where usr.user_id=b.author_id) as author_portrait,
+	        (select user_name from users as usr where usr.user_id=b.modify_author_id) as modify_author_name,
+	        (select language_name from languages as l where l.id=b.language_id) as language_name,
+	        (select folder_name from folders as f where f.folder_id=b.folder_id) as folder_name,
+	        (select status from book_status as st where st.id=b.book_status_id) as book_status_name 
+		from 
+			books as b
+		where 
+			b.author_id=#userId:VARCHAR# and
+			<![CDATA[
+        	b.abuse_count < 5
+        	]]>
+			<isEqual property="bookStatus" compareValue="3">
+			<![CDATA[
+			and (b.book_status_id <= 3)
+			]]>
+			</isEqual>
+			<isEqual property="bookStatus" compareValue="6">
+			<![CDATA[
+			and (b.book_status_id >= 6)
+			]]>
+			</isEqual>
+			<isEqual property="bookStatus" compareValue="0">
+			<![CDATA[
+			and (b.book_status_id > 0)
+			]]>
+			</isEqual>
+			<isEqual property="fieldIndex" compareValue="1">
+			and match(b.title) 
+				against (#query:VARCHAR# in boolean mode) 
+			</isEqual>
+			<isEqual property="fieldIndex" compareValue="2">
+			and match(b.description) 
+				against (#query:VARCHAR# in boolean mode) 
+			</isEqual>
+		order by
+			b.create_date desc
+		limit
+			#offset:INT#,#length:INT#
+  	</select>    	
+   	
+   	<!--  	
+   	<select id="searchFolders" resultMap="misc.folderResult" parameterClass="searchParam">
+  	    select distinct
+  	    	f.*,
+  	    	(select user_name from users as u where u.user_id=f.user_id) as user_name,
+  	    	(select folder_status_name from folder_status as fs where fs.id=f.folder_status) as folder_status_name
+  	    from 
+  	    	folders as f
+  	    where
+  	    	match(f.folder_name)
+		  	    against (#query:VARCHAR# in boolean mode)
+		order by
+			f.folder_time desc
+		limit
+			#offset:INT#,#length:INT#
+  	</select> 
+	-->
+	
+	<select id="searchFolders" resultMap="misc.folderResult" parameterMap="search_multi_params">
+  	    select distinct
+  	    	f.*,
+  	    	(select user_name from users as u where u.user_id=f.user_id) as user_name,
+  	    	(select folder_status_name from folder_status as fs where fs.id=f.folder_status) as folder_status_name
+  	    from 
+  	    	folders as f
+  	    where
+  	    <iterate conjunction=" and " property="list">
+        	f.folder_name like #list[]#
+		</iterate>
+		order by
+			f.folder_time desc
+		limit
+			#offset#,#length#
+  	</select> 
+  	
+   	<select id="searchFoldersStatusLimit" resultMap="misc.folderResult" parameterClass="searchParam">
+  	    <![CDATA[
+  	    select distinct
+  	    	f.*,
+  	    	(select user_name from users as u where u.user_id=f.user_id) as user_name,
+  	    	(select folder_status_name from folder_status as fs where fs.id=f.folder_status) as folder_status_name
+  	    from 
+  	    	folders as f
+  	    where
+  	    	(f.folder_status<>3) 
+  	    	and (
+  	    	match(f.folder_name)
+		  	    against (#query:VARCHAR# in boolean mode)
+			)
+		order by
+			f.folder_time desc
+		limit
+			#offset:INT#,#length:INT#
+		]]>	
+  	</select> 
+  	
+</sqlMap>    

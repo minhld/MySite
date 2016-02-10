@@ -34,4 +34,17 @@
 		<property name="paramName" value="lang" />
 	</bean>
 	
+	<bean 
+	    id="sqlMapClient"
+	    class="org.springframework.orm.ibatis.SqlMapClientFactoryBean">
+        <property 
+            name="configLocation"
+            value="/WEB-INF/conf/sql-config.xml" />
+    </bean>
+	
+	<bean id="serviceDAOBean" class="com.assl.data.ServiceDAO">
+        <property name="dataSource" ref="dataSource"/>
+        <property name="sqlMapClient" ref="sqlMapClient"/>
+    </bean>
+		
 </beans>
