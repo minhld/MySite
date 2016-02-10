@@ -11,13 +11,13 @@ public class ServiceDAO extends SqlMapClientDaoSupport {
 	
 	public Service getService(String serviceId) throws Exception {
 		Service serviceFound = (Service) getSqlMapClientTemplate().
-						queryForObject("getService", serviceId);
+						queryForObject("service.getService", serviceId);
 		return serviceFound;
 	}
 
 	public List<Service> searchService(String serviceId) throws Exception {
 		List<Service> servicesFound = getSqlMapClientTemplate().
-						queryForList("searchServices", serviceId);
+						queryForList("service.searchServices", serviceId);
 		return servicesFound;
 	}
 	

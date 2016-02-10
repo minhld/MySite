@@ -45,9 +45,9 @@
 			</beans:props>
 		</beans:property>
 	</beans:bean>
-		
+
 	<beans:bean id="mainManager" class="com.assl.sm.manager.MainManager">
+	    <beans:property name="serviceDAO" ref="serviceDAOBean"/>
 	</beans:bean>
-		
-	
+
 </beans:beans>
