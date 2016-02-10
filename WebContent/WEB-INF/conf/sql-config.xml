@@ -6,5 +6,5 @@
 <sqlMapConfig>
     <settings useStatementNamespaces="true" lazyLoadingEnabled="false" />
     
-    <sqlMap resource="com/assl/data/sql-service.xml"/>
+    <sqlMap resource="com/assl/sm/data/sql-service.xml"/>
 </sqlMapConfig>

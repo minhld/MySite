@@ -25,11 +25,17 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 
+import com.assl.sm.data.ServiceDAO;
 import com.assl.sm.utils.Constant;
 import com.assl.sm.utils.Utils;
 
 @SuppressWarnings({"deprecation"})
 public class MainManager {
+	
+	private ServiceDAO serviceDAO;
+	public void setServiceDAO(ServiceDAO serviceDAO) {
+		this.serviceDAO = serviceDAO;
+	}
 	
 	@RequestMapping(value = "/", method = RequestMethod.GET)
 	public String defaultHandler(HttpServletRequest req, 
@@ -50,12 +56,17 @@ public class MainManager {
 		resp.setContentType(Constant.main.RESPONSE_CONTENTTYPE);
 		resp.setHeader(Constant.main.RESPONSE_HEADER_CACHECONTROL, Constant.main.RESPONSE_HEADER_NOCACHE);
 		JSONObject jsonObj = new JSONObject();
-
-		if (!serviceId.equals(Constant.EMPTY)) {
-			jsonObj.append("status", "okay");
-			jsonObj.append("job", "/samples/Job.jar");
-		} else {
-			jsonObj.append("status", "no service specified");
+		
+		try {
+			Service foundService = serviceDAO.getService(serviceId);
+			if (foundService != null) {
+				jsonObj.append("status", "okay");
+				jsonObj.append("sjp", foundService.getServiceUrl());
+			} else {
+				jsonObj.append("status", "no service found");				
+			}
+		} catch (Exception e) {
+			jsonObj.append("status", "exp " + e.getMessage());
 		}
 		
 		resp.getWriter().write(jsonObj.toString());

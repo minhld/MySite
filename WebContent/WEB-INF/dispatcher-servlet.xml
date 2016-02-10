@@ -46,7 +46,8 @@
 		</beans:property>
 	</beans:bean>
 		
-	<beans:bean id="mainManager" class="com.assl.sm.manager.MainManager" />
+	<beans:bean id="mainManager" class="com.assl.sm.manager.MainManager">
+	</beans:bean>
 		
 	
 </beans:beans>
