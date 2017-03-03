@@ -436,8 +436,8 @@
 					</div>
 
 					<div class="col-md-3 col-sm-4 resume-place wow bounceInRight">
-						<h4><i class="fa fa-suitcase"></i> Stanford University</h4>
-						<i class="fa fa-calendar"></i> 2013 - 2014
+						<h4><i class="fa fa-suitcase"></i>Utah State University</h4>
+						<i class="fa fa-calendar"></i> 2015 - Now
 						<hr class="visible-xs">
 					</div>
 
@@ -448,8 +448,8 @@
 					</div>
 
 					<div class="col-md-3 col-sm-4 resume-place wow bounceInRight">
-						<h4><i class="fa fa-suitcase"></i> St. Patrick University</h4>
-						<i class="fa fa-calendar"></i> 2013 - 2014
+						<h4><i class="fa fa-suitcase"></i>Konkuk University</h4>
+						<i class="fa fa-calendar"></i> 2008 - 2010
 						<hr class="visible-xs">
 					</div>
 
