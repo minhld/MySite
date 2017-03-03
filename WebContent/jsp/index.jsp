@@ -44,7 +44,7 @@
 
 		<div id="preloader">
 			<div id="status">
-				<div class="status-mes"><h4>Mark Stone</h4></div>
+				<div class="status-mes"><h4>Minh Le</h4></div>
 			</div>
 		</div>
 
@@ -61,7 +61,7 @@
 						<span class="icon-bar"></span>
 						<span class="icon-bar"></span>
 					</button>
-					<a class="navbar-brand" href="#">Mark Stone</a>
+					<a class="navbar-brand" href="#">Minh Le</a>
 				</div>
 
 				<!-- Collect the nav links, forms, and other content for toggling -->
@@ -92,8 +92,8 @@
 					<div class="col-md-12">
 
 						<div class="hello wow bounceInDown">
-							<h1>Hello, I'm Mark Stone</h1>
-							<h3><span class="rotate">Visual Designer. | Front-end Developer. | C# Programmer.</span></h3>
+							<h1>Hello, I'm Minh Le</h1>
+							<h3><span class="rotate">Mobile, Web and Application Developer | Back-end Developer | Java, C#, JavaScript</span></h3>
 						</div>
 
 						<a href="#profile">
@@ -123,21 +123,21 @@
 					<div class="col-sm-4 wow bounceInLeft">
 						<div class="profile-item">
 							<i class="fa fa-envelope-o"></i>
-							<h5><a href="#">markstone@some.com</a></h5>
+							<h5><a href="#">ledinhminh3883@gmail.com</a></h5>
 						</div>
 					</div>
 
 					<div class="col-sm-4 wow bounceInUp">
 						<div class="profile-item">
 							<i class="fa fa-phone"></i>
-							<h5>(1234) 1234-5678-1011</h5>
+							<h5>(435)754-5808</h5>
 						</div>
 					</div>
 
 					<div class="col-sm-4 wow bounceInRight">
 						<div class="profile-item">
 							<i class="fa fa-map-marker"></i>
-							<h5>144 Some Street, Some City, Some Country</h5>
+							<h5>Logan, Utah 84341</h5>
 						</div>
 					</div>
 
@@ -158,8 +158,8 @@
 				<div class="row">
 
 					<div class="col-md-12 headline wow bounceInDown">
-						<h2>Mark Stone</h2>
-						<p>Visual Designer. Front-end Developer. C# Programmer.</p>
+						<h2>Minh Le</h2>
+						<p>Mobile, Web and Application Developer, Back-end Developer.</p>
 					</div>
 
 					<div class="col-md-3 col-sm-6 hidden-xs wow bounceInLeft">
