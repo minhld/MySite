@@ -40,13 +40,13 @@ public class MainManager {
 	@RequestMapping(value = "/", method = RequestMethod.GET)
 	public String defaultHandler(HttpServletRequest req, 
 						HttpServletResponse resp, Model model){
-		return Constant.main.INPUT;
+		return Constant.main.INDEX;
 	}
 	
-	@RequestMapping(value = "/input", method = RequestMethod.GET)
+	@RequestMapping(value = "/index", method = RequestMethod.GET)
 	public String inputHandler(HttpServletRequest req, 
 						HttpServletResponse resp, Model model){
-		return Constant.main.INPUT;
+		return Constant.main.INDEX;
 	}
 	
 	@RequestMapping(value = "/service/{serviceId}", method = RequestMethod.GET)

@@ -35,9 +35,9 @@
 		/* ---------------------------------------------- */
 
 		$('#intro').backstretch([
-			'assets/images/bg3.jpg',
-			'assets/images/bg4.jpg',
-			'assets/images/bg2.jpg'
+			'images/bg3.jpg',
+			'images/bg4.jpg',
+			'images/bg2.jpg'
 		], {duration: 3000, fade: 750});
 
 		/* ---------------------------------------------- /*
@@ -163,7 +163,7 @@
 
 				$.ajax({
 					type: 'POST',
-					url: 'assets/php/contact.php',
+					url: 'php/contact.php',
 					dataType: 'json',
 					data: {
 						name: name,

@@ -34,7 +34,7 @@ public class Constant {
 		public static final String RESPONSE_HEADER_CACHECONTROL = "Cache-Control";
 		public static final String RESPONSE_PRAGMA_CACHECONTROL = "Pragma";
 		public static final String RESPONSE_HEADER_NOCACHE = "no-cache";
-		public static final String INPUT = "input";
+		public static final String INDEX = "index";
 		public static final String RESULT = "result";
 		public static final String SERVICE = "service";
 
