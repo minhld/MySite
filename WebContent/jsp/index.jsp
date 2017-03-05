@@ -159,7 +159,7 @@
 
 					<div class="col-md-12 headline wow bounceInDown">
 						<h2>Minh Le</h2>
-						<p>Mobile, Web and Application Developer, Back-end Developer.</p>
+						<p>I am a Mobile, Web and Application Developer. My professionals are Java, C# and JavaScript.</p>
 					</div>
 
 					<div class="col-md-3 col-sm-6 hidden-xs wow bounceInLeft">
@@ -171,23 +171,7 @@
 						<div class="profile-widget">
 							<h3>Skillset</h3>
 
-							<h5>UX Design</h5>
-							<div class="skill-bar">
-								<div class="skill-rate-on"></div>
-								<div class="skill-rate-on"></div>
-								<div class="skill-rate-on"></div>
-								<div class="skill-rate-off"></div>
-							</div>
-
-							<h5>HTML / CSS3 / SASS</h5>
-							<div class="skill-bar">
-								<div class="skill-rate-on"></div>
-								<div class="skill-rate-on"></div>
-								<div class="skill-rate-off"></div>
-								<div class="skill-rate-off"></div>
-							</div>
-
-							<h5>Javascript</h5>
+							<h5>Java, C#, JavaScript, HTML5, VB.NET</h5>
 							<div class="skill-bar">
 								<div class="skill-rate-on"></div>
 								<div class="skill-rate-on"></div>
@@ -195,12 +179,28 @@
 								<div class="skill-rate-on"></div>
 							</div>
 
-							<h5>Ajax</h5>
+							<h5>Matlab, C++, PHP, ASP, Erlang</h5>
 							<div class="skill-bar">
 								<div class="skill-rate-on"></div>
+								<div class="skill-rate-on"></div>
+								<div class="skill-rate-on"></div>
 								<div class="skill-rate-off"></div>
-								<div class="skill-rate-off"></div>
-								<div class="skill-rate-off"></div>
+							</div>
+
+							<h5>Android, Windows Phone, SharePoint</h5>
+							<div class="skill-bar">
+								<div class="skill-rate-on"></div>
+								<div class="skill-rate-on"></div>
+								<div class="skill-rate-on"></div>
+								<div class="skill-rate-on"></div>
+							</div>
+
+							<h5>MySQL, MS SQL Server</h5>
+							<div class="skill-bar">
+								<div class="skill-rate-on"></div>
+								<div class="skill-rate-on"></div>
+								<div class="skill-rate-on"></div>
+								<div class="skill-rate-on"></div>
 							</div>
 						</div>
 
@@ -299,9 +299,9 @@
 									<div class="icon">
 										<i class="fa fa-pencil"></i>
 									</div>
-									<h4>Text rotator</h4>
+									<h4>Mobile Development</h4>
 									<div class="text">
-										<p>I am alone, and feel the charm of existence in this spot, which was created for the bliss of souls like mine. I am so happy, my dear friend.</p>
+										<p>I have 3 years working in commercial and research projects on Android using Java, and 2 years working on Windows Phone using C#.</p>
 									</div>
 								</div>
 							</div>
@@ -311,9 +311,9 @@
 									<div class="icon">
 										<i class="fa fa-image"></i>
 									</div>
-									<h4>Slideshow</h4>
+									<h4>Web Development</h4>
 									<div class="text">
-										<p>I am alone, and feel the charm of existence in this spot, which was created for the bliss of souls like mine. I am so happy, my dear friend.</p>
+										<p>I am capable of web development using different technologies JSP, ASP and PHP. My forte is HTML5/CSS3 and JavaScript.</p>
 									</div>
 								</div>
 							</div>
@@ -323,9 +323,9 @@
 									<div class="icon">
 										<i class="fa fa-cog"></i>
 									</div>
-									<h4>Easy configure</h4>
+									<h4>Back-end Development</h4>
 									<div class="text">
-										<p>I am alone, and feel the charm of existence in this spot, which was created for the bliss of souls like mine. I am so happy, my dear friend.</p>
+										<p>I have 3 years experience in Spring Framework and 1 year in SharePoint Services and Joomla. Web servers that I usually use are Tomcat, JBoss and IIS.</p>
 									</div>
 								</div>
 							</div>
@@ -339,9 +339,9 @@
 									<div class="icon">
 										<i class="fa fa-code"></i>
 									</div>
-									<h4>Clear code</h4>
+									<h4>Window Applications</h4>
 									<div class="text">
-										<p>I am alone, and feel the charm of existence in this spot, which was created for the bliss of souls like mine. I am so happy, my dear friend.</p>
+										<p>I have several years working in Window commercial applications using C# and VB.NET (with Visual Studio) and Java (with Eclipse).</p>
 									</div>
 								</div>
 							</div>
@@ -351,9 +351,9 @@
 									<div class="icon">
 										<i class="fa fa-desktop"></i>
 									</div>
-									<h4>Responsive design</h4>
+									<h4>Distributed Systems</h4>
 									<div class="text">
-										<p>I am alone, and feel the charm of existence in this spot, which was created for the bliss of souls like mine. I am so happy, my dear friend.</p>
+										<p>I have 3 years doing research projects in distributed systems. My current research improves performance and energy efficiency of mobile systems.</p>
 									</div>
 								</div>
 							</div>
@@ -363,9 +363,9 @@
 									<div class="icon">
 										<i class="fa fa-life-ring"></i>
 									</div>
-									<h4>Support</h4>
+									<h4>Research</h4>
 									<div class="text">
-										<p>I am alone, and feel the charm of existence in this spot, which was created for the bliss of souls like mine. I am so happy, my dear friend.</p>
+										<p>One of my strengths is problem solving and algorithms. I have good background in Mathematics (2 Bronze prizes in National Mathematical Contests).</p>
 									</div>
 								</div>
 							</div>
@@ -395,8 +395,8 @@
 					</div>
 
 					<div class="col-md-9 headline nomargin wow bounceInDown">
-						<h3>I'm currently available for freelance work.</h3>
-						<p>I am alone, and feel the charm of existence in this spot, which was created for the bliss of souls like mine. I am so happy, my dear friend.</p>
+						<h3>I'm currently looking for intern positions.</h3>
+						<p>As a graduate student, I am actively looking for intern positions where I could learn and dedicate my efforts, as well as work full-time afterward.</p>
 						<a href="#contact" class="btn btn-default btn-custom-2 callout-btn"><i class="fa fa-paper-plane-o icon-before"></i> Contact me</a>
 					</div>
 
@@ -430,8 +430,8 @@
 					</div>
 
 					<div class="col-md-6 col-sm-8 resume-item wow bounceInUp">
-						<h4>Computer science</h4>
-						<p>I am alone, and feel the charm of existence in this spot, which was created for the bliss of souls like mine. I am so happy, my dear friend.</p>
+						<h4>Master in Computer Science - Middleware for Mobile Computing</h4>
+						<p>We have been developing Service Market Middleware, an edge-computing architecture that utilizes both edge server and mobile peer-to-peer network to enable seamless remote executions with respect to high performance and failure-resistance. Our implementations on Android and Windows phone illustrates the capability of our middleware in reality with performance increased to 70% and 50% of energy conserved.</p>
 						<hr class="hidden-xs">
 					</div>
 
@@ -442,8 +442,8 @@
 					</div>
 
 					<div class="col-md-6 col-md-offset-3 col-sm-8 resume-item wow bounceInUp">
-						<h4>Visual designer</h4>
-						<p>I am alone, and feel the charm of existence in this spot, which was created for the bliss of souls like mine. I am so happy, my dear friend.</p>
+						<h4>Master in Computer Science - Distributed Systems</h4>
+						<p>Developed SensorBridge: a system extending Message-oriented Middleware to easily deploy with arbitrary wireless sensor networks. SensorBridge is adaptive with most of the sensor types, applicable for web and 3D virtualization systems.</p>
 						<hr class="hidden-xs">
 					</div>
 
@@ -462,26 +462,50 @@
 					</div>
 
 					<div class="col-md-6 col-sm-8 resume-item wow bounceInUp">
-						<h4>Front-end developer / php programmer</h4>
+						<h4>Software Developer</h4>
 						<p>I am alone, and feel the charm of existence in this spot, which was created for the bliss of souls like mine. I am so happy, my dear friend.</p>
 						<hr class="hidden-xs">
 					</div>
 
 					<div class="col-md-3 col-sm-4 resume-place wow bounceInRight">
-						<h4><i class="fa fa-suitcase"></i> Google</h4>
-						<i class="fa fa-calendar"></i> 2013 - 2014
+						<h4><i class="fa fa-suitcase"></i>NSoft Inc.</h4>
+						<i class="fa fa-calendar"></i> 2012 - 2015
 						<hr class="visible-xs">
 					</div>
 
 					<div class="col-md-6 col-md-offset-3 col-sm-8 resume-item wow bounceInUp">
-						<h4>C# programmer</h4>
-						<p>I am alone, and feel the charm of existence in this spot, which was created for the bliss of souls like mine. I am so happy, my dear friend.</p>
+						<h4>Software Developer</h4>
+						<p>Developed cluster-based iris recognition services to accelerate iris matching speed to millions of comparison per second. Enabled distributed shared memory and opened SOAP-based APIs for web and mobile applications. Developed visual toolkit to automatically detect memory leaks and evaluate the correctness of matching algorithm.</p>
 						<hr class="hidden-xs">
 					</div>
 
 					<div class="col-md-3 col-sm-4 resume-place wow bounceInRight">
-						<h4><i class="fa fa-suitcase"></i> Microsoft</h4>
-						<i class="fa fa-calendar"></i> 2013 - 2014
+						<h4><i class="fa fa-suitcase"></i>IriTech Inc.</h4>
+						<i class="fa fa-calendar"></i> 2010 - 2012
+						<hr class="visible-xs">
+					</div>
+
+					<div class="col-md-6 col-md-offset-3 col-sm-8 resume-item wow bounceInUp">
+						<h4>Software Integration Engineer</h4>
+						<p>Provided SharePoint-based solution packages to the governmental organizations. Designed SharePoint Workflows and enhanced annual report generating speed with MSSQL-BI cubes.</p>
+						<hr class="hidden-xs">
+					</div>
+
+					<div class="col-md-3 col-sm-4 resume-place wow bounceInRight">
+						<h4><i class="fa fa-suitcase"></i>FPT Information System</h4>
+						<i class="fa fa-calendar"></i> 2007 - 2008
+						<hr class="visible-xs">
+					</div>
+
+					<div class="col-md-6 col-md-offset-3 col-sm-8 resume-item wow bounceInUp">
+						<h4>Software Developer</h4>
+						<p>Worked in Group 2 for software outsourcing, I participated in the task-force team working in the POC periods. My duty was solving technical problems, developed and tested for 6 outsourced software projects.</p>
+						<hr class="hidden-xs">
+					</div>
+
+					<div class="col-md-3 col-sm-4 resume-place wow bounceInRight">
+						<h4><i class="fa fa-suitcase"></i>FPT Software</h4>
+						<i class="fa fa-calendar"></i> 2005 - 2007
 						<hr class="visible-xs">
 					</div>
 
@@ -490,7 +514,7 @@
 				<div class="row">
 
 					<div class="col-md-6 col-md-offset-3 wow bounceInUp">
-						<a href="#" class="btn btn-default btn-custom-2"><i class="fa fa-cloud-download icon-before"></i> Download CV</a>
+						<a href="files/Le_CV2.pdf" class="btn btn-default btn-custom-2"><i class="fa fa-cloud-download icon-before"></i> Download CV</a>
 					</div>
 
 				</div><!-- .row -->
@@ -673,8 +697,8 @@
 				<div class="row">
 
 					<div class="col-md-12 headline wow bounceInLeft">
-						<h2>Contact Us</h2>
-						<p>Drop us a line or give us a ring. We love to hear you.</p>
+						<h2>Contact Me</h2>
+						<p>Drop me a line if you are interested in my resume. I love to hear you.</p>
 					</div>
 
 					<div class="col-md-6 wow bounceInUp">
@@ -682,10 +706,10 @@
 						<p>I am alone, and feel the charm of existence in this spot, which was created for the bliss of souls like mine. I am so happy, my dear friend.</p>
 
 						<ul class="icon-list">
-							<li><i class="fa fa-fw fa-map-marker"></i>001 Some Street, Some City, US</li>
-							<li><i class="fa fa-fw fa-phone"></i>123 4567 8910</li>
-							<li><i class="fa fa-fw fa-envelope-o"></i><a href="mailto:">support@site.com</a></li>
-							<li><i class="fa fa-fw fa-globe"></i><a href="">http://www.site.com</a></li>
+							<li><i class="fa fa-fw fa-map-marker"></i>Logan, Utah 84341</li>
+							<li><i class="fa fa-fw fa-phone"></i>(435)754-5808</li>
+							<li><i class="fa fa-fw fa-envelope-o"></i><a href="mailto:">ledinhminh3883@gmail.com</a></li>
+							<li><i class="fa fa-fw fa-globe"></i><a href="">http://www.jajanglab.com</a></li>
 						</ul>
 
 					</div>

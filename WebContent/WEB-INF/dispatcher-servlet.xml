@@ -29,6 +29,7 @@
 	<mvc:resources mapping="/samples/**" location="/samples/" />
 	<mvc:resources mapping="/bootstrap/**" location="/bootstrap/" />
 	<mvc:resources mapping="/fonts/**" location="/fonts/" />
+	<mvc:resources mapping="/files/**" location="/files/" />
 	
 	<!-- dispatching list -->
 	<beans:bean 
