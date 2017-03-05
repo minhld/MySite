@@ -534,7 +534,7 @@
 				<div class="row">
 
 					<div class="col-md-3 hidden-xs wow bounceInLeft">
-						<h3>Customers</h3>
+						<h3>Achievements</h3>
 					</div>
 
 					<div class="col-md-9 wow bounceInRight">
@@ -542,33 +542,38 @@
 						<div id="owl-clients" class="owl-carousel">
 
 							<div class="owl-item">
-								<img src="<%=webRootPath %>/images/logo/client160-3.png" alt="">
-								<h4>Client 1</h4>
+								<img src="<%=webRootPath %>/images/logo/a1.jpg" alt="" onclick="window.open('http://grco.usu.edu');" style="cursor:pointer;">
+								<h4>USU Student Research Award 2016</h4>
 							</div>
 
 							<div class="owl-item">
-								<img src="<%=webRootPath %>/images/logo/client160-1.png" alt="">
-								<h4>Client 2</h4>
+								<img src="<%=webRootPath %>/images/logo/a1.jpg" alt="" onclick="window.open('http://www.usu.edu');" style="cursor:pointer;">
+								<h4>USU Graduate Scholarship 2015 - Now</h4>
 							</div>
 
 							<div class="owl-item">
-								<img src="<%=webRootPath %>/images/logo/client160-3.png" alt="">
-								<h4>Client 3</h4>
+								<img src="<%=webRootPath %>/images/logo/a8.jpg" alt="" onclick="window.open('http://ec.europa.eu/research/mariecurieactions');" style="cursor:pointer;">
+								<h4>Marie Curie Scholarship 2012</h4>
 							</div>
 
 							<div class="owl-item">
-								<img src="<%=webRootPath %>/images/logo/client160-1.png" alt="">
-								<h4>Client 4</h4>
+								<img src="<%=webRootPath %>/images/logo/a2.jpg" alt="" onclick="window.open('https://www.useoul.edu/research/bk21-groups');" style="cursor:pointer;">
+								<h4>BK21 Scholarship 2008-2010</h4>
 							</div>
 
 							<div class="owl-item">
-								<img src="<%=webRootPath %>/images/logo/client160-3.png" alt="">
-								<h4>Client 5</h4>
+								<img src="<%=webRootPath %>/images/logo/a3.jpg" alt="" onclick="window.open('http://www.microsoft-certification.co.uk/mcad_training.html');" style="cursor:pointer;">
+								<h4>MCAD 2008</h4>
 							</div>
 
 							<div class="owl-item">
-								<img src="<%=webRootPath %>/images/logo/client160-1.png" alt="">
-								<h4>Client 6</h4>
+								<img src="<%=webRootPath %>/images/logo/a5.jpg" alt="">
+								<h4>National Mathematical Olympiad 2001</h4>
+							</div>
+
+							<div class="owl-item">
+								<img src="<%=webRootPath %>/images/logo/a5.jpg" alt="">
+								<h4>National Mathematical Olympiad 2000</h4>
 							</div>
 
 						</div>
