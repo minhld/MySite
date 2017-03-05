@@ -208,18 +208,18 @@
 							<h3>Social Profiles</h3>
 							<ul class="widget-social">
 								<li><a href="#"><i class="fa fa-facebook fa-fw"></i></a></li>
-								<li><a href="#"><i class="fa fa-github-alt"></i></a></li>
-								<li><a href="#"><i class="fa fa-dribbble"></i></a></li>
-								<li><a href="#"><i class="fa fa-google-plus"></i></a></li>
+								<li><a href="#" onclick="window.open('https://www.github.com/minhld');"><i class="fa fa-github-alt"></i></a></li>
+								<li><a href="#" onclick="window.open('https://www.linkedin.com/in/ledinhminh3883');"><i class="fa fa-linkedin"></i></a></li>
+								<li><a href="#" onclick="window.open('https://sites.google.com/site/ldmcntt');"><i class="fa fa-google-plus"></i></a></li>
 							</ul>
 						</div>
 
 					</div><!-- .col-md-3 -->
 
 					<div class="col-md-6 col-sm-12 wow bounceInRight">
-						<h3>Profesional Profile</h3>
-						<p>I am alone, and feel the charm of existence in this spot, which was created for the bliss of souls like mine. I am so happy, my dear friend. I am alone, and feel the charm of existence in this spot, which was created for the bliss of souls like mine. I am so happy, my dear friend. I am alone, and feel the charm of existence in this spot, which was created for the bliss of souls like mine. I am so happy, my dear friend. I am so happy, my dear friend.</p>
-						<p>I am alone, and feel the charm of existence in this spot, which was created for the bliss of souls like mine. I am so happy, my dear friend.</p>
+						<h3>Professional Profile</h3>
+						<p>I am a researcher in Computer Science at Utah State University. My research focus on opening the possibilities of applying mobile opportunistic networks to the extreme cases like disaster areas or battlefields with respect to trust, high performance and energy preservation. In software industry, I have totally 8 year experience in software design and development that made me professional in windows, web and mobile platforms and technologies.</p>
+						<p>In my leisure time, I develop useful mobile applications as a hobby. I'm really passionate about computer and mathematics and willing to read anything relevant to.</p>
 					</div>
 
 				</div><!-- .row -->
@@ -245,27 +245,27 @@
 					<div class="col-md-3 col-sm-4 wow bounceInDown">
 						<div class="stat">
 							<div class="stat-icon">
-								<h2><i class="fa fa-coffee hidden-xs"></i><span class="timer" data-to="32"></span></h2>
+								<h2><i class="fa fa-coffee hidden-xs"></i><span class="timer" data-to="10"></span></h2>
 							</div>
-							<h3>Cup of coffee</h3>
+							<h3>Techniques</h3>
 						</div>
 					</div>
 
 					<div class="col-md-3 col-sm-4 wow bounceInUp">
 						<div class="stat">
 							<div class="stat-icon">
-								<h2><i class="fa fa-code hidden-xs"></i><span class="timer" data-to="999"></span></h2>
+								<h2><i class="fa fa-code hidden-xs"></i><span class="timer" data-to="25"></span></h2>
 							</div>
-							<h3>Line of code</h3>
+							<h3>Projects</h3>
 						</div>
 					</div>
 
 					<div class="col-md-3 col-sm-4 wow bounceInRight">
 						<div class="stat">
 							<div class="stat-icon">
-								<h2><i class="fa fa-child hidden-xs"></i><span class="timer" data-to="300"></span>+</h2>
+								<h2><i class="fa fa-child hidden-xs"></i><span class="timer" data-to="500"></span>+</h2>
 							</div>
-							<h3>Happy customers</h3>
+							<h3>Happy colleagues</h3>
 						</div>
 					</div>
 
@@ -593,88 +593,89 @@
 
 					<div class="col-md-12 headline wow bounceInDown">
 						<h2>Portfolio</h2>
-						<p>My best works.</p>
+						<p>Some pictures of my interesting works.</p>
 					</div>
 
 					<div class="col-md-4 col-sm-6 wow bounceInLeft">
-						<a href="<%=webRootPath %>/images/p1.jpg" class="pop-up" title="Caption 1">
+						<a href="<%=webRootPath %>/images/p1.jpg" class="pop-up" title="BuzzPost">
 							<div class="portfolio-item">
 								<div class="portfolio-item-preview">
 									<img src="<%=webRootPath %>/images/p1.jpg" alt="">
 								</div>
 								<div class="portfolio-item-description">
-									<h3>Some work</h3>
-									<p>Category</p>
+									<h3>BuzzPost</h3>
+									<p>Web</p>
 								</div>
 							</div>
 						</a>
 					</div>
 
 					<div class="col-md-4 col-sm-6 wow bounceInUp">
-						<a href="https://vimeo.com/45830194" class="video-pop-up" title="Caption 2">
+						<!--  <a href="https://vimeo.com/45830194" class="video-pop-up" title="Caption 2"> -->
+						<a href="<%=webRootPath %>/images/p2.jpg" class="pop-up" title="CampusWeek">
 							<div class="portfolio-item">
 								<div class="portfolio-item-preview">
 									<img src="<%=webRootPath %>/images/p2.jpg" alt="">
 								</div>
 								<div class="portfolio-item-description">
-									<h3>Some work</h3>
-									<p>Category</p>
+									<h3>CampusWeek</h3>
+									<p>Web</p>
 								</div>
 							</div>
 						</a>
 					</div>
 
 					<div class="col-md-4 col-sm-6 wow bounceInRight">
-						<a href="<%=webRootPath %>/images/p3.jpg" class="pop-up" title="Caption 3">
+						<a href="<%=webRootPath %>/images/p3.jpg" class="pop-up" title="Pubress Android">
 							<div class="portfolio-item">
 								<div class="portfolio-item-preview">
 									<img src="<%=webRootPath %>/images/p3.jpg" alt="">
 								</div>
 								<div class="portfolio-item-description">
-									<h3>Some work</h3>
-									<p>Category</p>
+									<h3>Pubress Android</h3>
+									<p>Android</p>
 								</div>
 							</div>
 						</a>
 					</div>
 
 					<div class="col-md-4 col-sm-6 wow bounceInUp" data-wow-delay=".2s">
-						<a href="<%=webRootPath %>/images/p5.jpg" class="pop-up" title="Caption 4">
+						<a href="<%=webRootPath %>/images/p5.jpg" class="pop-up" title="EBook Reader">
 							<div class="portfolio-item">
 								<div class="portfolio-item-preview">
 									<img src="<%=webRootPath %>/images/p5.jpg" alt="">
 								</div>
 								<div class="portfolio-item-description">
-									<h3>Some work</h3>
-									<p>Category</p>
+									<h3>EBook Reader</h3>
+									<p>Android</p>
 								</div>
 							</div>
 						</a>
 					</div>
 
 					<div class="col-md-4 col-sm-6 wow bounceInUp" data-wow-delay=".4s">
-						<a href="<%=webRootPath %>/images/p8.jpg" class="pop-up" title="Caption 5">
+						<a href="<%=webRootPath %>/images/p8.jpg" class="pop-up" title="SensorBridge-3D">
 							<div class="portfolio-item">
 								<div class="portfolio-item-preview">
 									<img src="<%=webRootPath %>/images/p8.jpg" alt="">
 								</div>
 								<div class="portfolio-item-description">
-									<h3>Some work</h3>
-									<p>Category</p>
+									<h3>SensorBridge 3D</h3>
+									<p>Windows App</p>
 								</div>
 							</div>
 						</a>
 					</div>
 
 					<div class="col-md-4 col-sm-6 wow bounceInUp" data-wow-delay=".6s">
-						<a href="<%=webRootPath %>/images/p6.jpg" class="pop-up" title="Caption 6">
+						<a href="<%=webRootPath %>/images/p6.jpg" class="pop-up" title="SensorBridge-Web">
 							<div class="portfolio-item">
 								<div class="portfolio-item-preview">
 									<img src="<%=webRootPath %>/images/p6.jpg" alt="">
 								</div>
 								<div class="portfolio-item-description">
-									<h3>Some work</h3>
-									<p>Category</p>
+									<h3>SensorBridge Web</h3>
+									<p>Web</p>
 								</div>
 							</div>
 						</a>
@@ -703,7 +704,7 @@
 
 					<div class="col-md-6 wow bounceInUp">
 
-						<p>I am alone, and feel the charm of existence in this spot, which was created for the bliss of souls like mine. I am so happy, my dear friend.</p>
+						<p>If I couldn't reply you in time, please leave me a text message.</p>
 
 						<ul class="icon-list">
 							<li><i class="fa fa-fw fa-map-marker"></i>Logan, Utah 84341</li>
@@ -763,7 +764,7 @@
 
 					<div class="col-md-12">
 						<p class="copy">
-							© 2014 Mark Stone, All Rights Reserved.
+							© 2017 Minh Le, All Rights Reserved.
 						</p>
 					</div>
 
