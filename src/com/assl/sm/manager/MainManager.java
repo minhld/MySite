@@ -44,9 +44,21 @@ public class MainManager {
 	}
 	
 	@RequestMapping(value = "/index", method = RequestMethod.GET)
-	public String inputHandler(HttpServletRequest req, 
+	public String indexHandler(HttpServletRequest req, 
 						HttpServletResponse resp, Model model){
 		return Constant.main.INDEX;
+	}
+	
+	@RequestMapping(value = "/blogs", method = RequestMethod.GET)
+	public String blogsHandler(HttpServletRequest req, 
+						HttpServletResponse resp, Model model){
+		return Constant.main.BLOGS;
+	}
+
+	@RequestMapping(value = "/post", method = RequestMethod.GET)
+	public String postHandler(HttpServletRequest req, 
+						HttpServletResponse resp, Model model){
+		return Constant.main.POST;
 	}
 	
 	@RequestMapping(value = "/service/{serviceId}", method = RequestMethod.GET)

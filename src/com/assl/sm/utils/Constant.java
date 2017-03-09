@@ -35,6 +35,8 @@ public class Constant {
 		public static final String RESPONSE_PRAGMA_CACHECONTROL = "Pragma";
 		public static final String RESPONSE_HEADER_NOCACHE = "no-cache";
 		public static final String INDEX = "index";
+		public static final String BLOGS = "blogs";
+		public static final String POST = "post";
 		public static final String RESULT = "result";
 		public static final String SERVICE = "service";
 

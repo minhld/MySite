@@ -11,7 +11,7 @@
 		String webRootPath = request.getContextPath();
 	%>
 
-	<title>Minh Le Porfolio</title>
+	<title>Minh Le's Information</title>
 
 	<!-- CSS -->
 	<!-- Bootstrap core CSS -->

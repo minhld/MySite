@@ -43,6 +43,9 @@
 		<beans:property name="mappings">
 			<beans:props>
 			    <beans:prop key="/">mainManager</beans:prop>
+			    <beans:prop key="/index">mainManager</beans:prop>
+			    <beans:prop key="/blogs">mainManager</beans:prop>
+			    <beans:prop key="/post">mainManager</beans:prop>
 			    <beans:prop key="/input">mainManager</beans:prop>
 			    <beans:prop key="/service/*">mainManager</beans:prop>
 			</beans:props>
