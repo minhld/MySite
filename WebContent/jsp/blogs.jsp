@@ -58,9 +58,6 @@
                         <a href="<%=webRootPath %>/blogs">Home</a>
                     </li>
                     <li>
-                        <a href="<%=webRootPath %>/about">About</a>
-                    </li>
-                    <li>
                         <a href="<%=webRootPath %>/contact">Contact</a>
                     </li>
                 </ul>
@@ -146,7 +143,7 @@
                             </a>
                         </li>
                     </ul>
-                    <p class="copyright text-muted">Copyright &copy; Your Website 2016</p>
+                    <p class="copyright text-muted">Copyright &copy; Minh Le 2017</p>
                 </div>
             </div>
         </div>

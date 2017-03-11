@@ -61,6 +61,12 @@ public class MainManager {
 		return Constant.main.POST;
 	}
 	
+	@RequestMapping(value = "/editor", method = RequestMethod.GET)
+	public String editorHandler(HttpServletRequest req, 
+						HttpServletResponse resp, Model model){
+		return Constant.main.EDITOR;
+	}
+	
 	@RequestMapping(value = "/service/{serviceId}", method = RequestMethod.GET)
 	public void serviceHandler(HttpServletRequest req, HttpServletResponse resp,
 					@PathVariable("serviceId") String serviceId, Model model)

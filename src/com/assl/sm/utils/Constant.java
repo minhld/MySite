@@ -37,6 +37,7 @@ public class Constant {
 		public static final String INDEX = "index";
 		public static final String BLOGS = "blogs";
 		public static final String POST = "post";
+		public static final String EDITOR = "editor";
 		public static final String RESULT = "result";
 		public static final String SERVICE = "service";
 
