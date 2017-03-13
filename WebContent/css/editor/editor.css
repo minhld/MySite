@@ -1,9 +1,9 @@
 @charset "UTF-8";
 
 #editor {
-	width: 500px;
-	max-height: 250px;
-	height: 250px;
+	width: 800px;
+	max-height: 500px;
+	height: 500px;
 	background-color: white;
 	border-collapse: separate; 
 	border: 1px solid rgb(204, 204, 204); 
@@ -17,11 +17,15 @@
 	outline: none;
 }
 
+.btn-toolbar {
+	width: 850px;
+}
+
 div[data-role="editor-toolbar"] {
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
+	-webkit-user-select: none;
+  	-moz-user-select: none;
+  	-ms-user-select: none;
+  	user-select: none;
 }
 
 .dropdown-menu a {

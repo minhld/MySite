@@ -14,20 +14,23 @@
 		String webRootPath = request.getContextPath();
 	%>
     <title>My Blog</title>
-
     <!-- Bootstrap Core CSS -->
     <link href="<%=webRootPath %>/bootstrap/css/bootstrap.min.css" rel="stylesheet">
-	
-	<!-- Bootstrap External Cores -->
-    <link href="<%=webRootPath %>/css/editor/bootstrap-combined.no-icons.min.css" rel="stylesheet">
-    <link href="<%=webRootPath %>/css/editor/bootstrap-responsive.min.css" rel="stylesheet">
-    <link href="http://netdna.bootstrapcdn.com/font-awesome/3.0.2/css/font-awesome.css" rel="stylesheet">
 
-	<!--  
-    <link href="<%=webRootPath %>/css/font-awesome.min.css" rel="stylesheet" type="text/css">
-    <link href='https://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
-    <link href='https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' rel='stylesheet' type='text/css'>
-	-->
+  	<link href="http://netdna.bootstrapcdn.com/twitter-bootstrap/2.3.1/css/bootstrap-combined.no-icons.min.css" rel="stylesheet">
+    <link href="http://netdna.bootstrapcdn.com/twitter-bootstrap/2.3.1/css/bootstrap-responsive.min.css" rel="stylesheet">
+	<link href="http://netdna.bootstrapcdn.com/font-awesome/3.0.2/css/font-awesome.css" rel="stylesheet">
+
+	<!-- Custom CSS -->
+    <link href="<%=webRootPath %>/css/editor/editor.css" rel="stylesheet">
+
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.0/jquery.min.js"></script>
+	<script src="<%=webRootPath %>/js/editor/jquery.hotkeys.js"></script>
+    <script src="http://netdna.bootstrapcdn.com/twitter-bootstrap/2.3.1/js/bootstrap.min.js"></script>
+    <script src="<%=webRootPath %>/js/editor/prettify.js"></script>
+    
+	<!-- Editor -->
+	<script src="<%=webRootPath %>/js/bootstrap-wysiwyg.js"></script>
 
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -36,9 +39,6 @@
         <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
     <![endif]-->
 	
-	<!-- Custom CSS -->
-    <link href="<%=webRootPath %>/css/editor/editor.css" rel="stylesheet">
-
 </head>
 
 <body>
@@ -176,22 +176,6 @@
             </div>
         </div>
     </footer>
-
-    <!-- jQuery -->
-    <script src="<%=webRootPath %>/js/jquery-1.11.0.min.js"></script>
-
-    <!-- Bootstrap Core JavaScript -->
-    <script src="<%=webRootPath %>/bootstrap/js/bootstrap.min.js"></script>
-
-    <!-- Contact Form JavaScript -->
-    <script src="<%=webRootPath %>/js/jqBootstrapValidation.js"></script>
-    <script src="<%=webRootPath %>/js/contact_me.js"></script>
-
-    <!-- Theme JavaScript -->
-    <script src="<%=webRootPath %>/js/clean-blog.min.js"></script>
-	
-	<!-- Editor -->
-	<script src="<%=webRootPath %>/js/bootstrap-wysiwyg.js"></script>
 	
 </body>
 
