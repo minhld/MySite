@@ -218,7 +218,7 @@
 
 					<div class="col-md-6 col-sm-12 wow bounceInRight">
 						<h3>Professional Profile</h3>
-						<p>I am a researcher in Computer Science at Utah State University. My research focus on opening the possibilities of applying mobile opportunistic networks to the extreme cases like disaster areas or battlefields with respect to trust, high performance and energy preservation. In software industry, I have totally 8 year experience in software design and development that made me professional in windows, web and mobile platforms and technologies.</p>
+						<p>I am a researcher in Computer Science at Utah State University. My research focus on opening the possibilities of applying mobile opportunistic networks to the extreme cases like disaster areas or battlefields with respect to trust, high performance and energy preservation. I have totally 7 years of experience in software industry and 4 years in academia that made me professional in windows, web and mobile platforms and technologies.</p>
 						<p>In my leisure time, I develop useful mobile applications as a hobby. I'm really passionate about computer and mathematics and willing to read anything relevant to.</p>
 					</div>
 
@@ -396,7 +396,7 @@
 
 					<div class="col-md-9 headline nomargin wow bounceInDown">
 						<h3>I'm currently looking for intern positions.</h3>
-						<p>As a graduate student, I am actively looking for intern positions where I could learn and dedicate my efforts, as well as work full-time afterward.</p>
+						<p>I am actively looking for a Software Developer position where I could learn and dedicate my efforts, as well as work full-time in the future.</p>
 						<a href="#contact" class="btn btn-default btn-custom-2 callout-btn"><i class="fa fa-paper-plane-o icon-before"></i> Contact me</a>
 					</div>
 
@@ -463,7 +463,10 @@
 
 					<div class="col-md-6 col-sm-8 resume-item wow bounceInUp">
 						<h4>Software Developer</h4>
-						<p>I am alone, and feel the charm of existence in this spot, which was created for the bliss of souls like mine. I am so happy, my dear friend.</p>
+						<p>Involved in full-stack development of publishing system and social network for ebook-reader community.</p>
+						<p>Developed high performance back-end web services (REST APIs) including content management, document conversion, storage and security.</p>
+						<p>Developed front-end interactive web with HTML5 and JQuery. Developed Android and Windows Phone versions of the system.</p>
+						<p><b>Techniques</b>: Java, C#, JSP, HTML5, JavaScript, JQuery, MySQL, Spring Framework, Android, ASP.</p>
 						<hr class="hidden-xs">
 					</div>
 
@@ -475,7 +478,10 @@
 
 					<div class="col-md-6 col-md-offset-3 col-sm-8 resume-item wow bounceInUp">
 						<h4>Software Developer</h4>
-						<p>Developed cluster-based iris recognition services to accelerate iris matching speed to millions of comparison per second. Enabled distributed shared memory and opened SOAP-based APIs for web and mobile applications. Developed visual toolkit to automatically detect memory leaks and evaluate the correctness of matching algorithm.</p>
+						<p>Designed and developed cluster-based web services for iris recognition to accelerate iris matching speed to 500k of comparisons per second.</p>
+						<p>Enabled distributed shared memory and opened SOAP-based APIs for web and mobile applications.</p>
+						<p>Developed visual toolkit to automatically detect memory leaks of the matching library and evaluate the correctness of the implemented algorithms.</p>
+						<p><b>Techniques</b>: Java, C#, C++, SOAP, Web Services, JBoss, MySQL, Android.</p>
 						<hr class="hidden-xs">
 					</div>
 
@@ -487,7 +493,9 @@
 
 					<div class="col-md-6 col-md-offset-3 col-sm-8 resume-item wow bounceInUp">
 						<h4>Software Integration Engineer</h4>
-						<p>Provided SharePoint-based solution packages to the governmental organizations. Designed SharePoint Workflows and enhanced annual report generating speed with MSSQL-BI cubes.</p>
+						<p>Customized and provided SharePoint workflow services to governmental organizations.</p>
+						<p>Converted data from Oracle DB to Microsoft SQL Server and built Business Intelligence tools to speedup report creation.</p>
+						<p><b>Techniques</b>: C#, SharePoint, Windows Workflow, Microsoft SQL Server, Oracle DB.</p>
 						<hr class="hidden-xs">
 					</div>
 
@@ -499,7 +507,9 @@
 
 					<div class="col-md-6 col-md-offset-3 col-sm-8 resume-item wow bounceInUp">
 						<h4>Software Developer</h4>
-						<p>Worked in Group 2 for software outsourcing, I participated in the task-force team working in the POC periods. My duty was solving technical problems, developed and tested for 6 outsourced software projects.</p>
+						<p>Worked in Software Outsourcing Group and involved into project POCs and solved technical problems.</p>
+						<p>Developed and maintained 6 outsourcing software projects.</p>
+						<p><b>Techniques</b>: C#, VB.NET, Windows CE, SQLCE, Delphi, ASP, PHP.</p>
 						<hr class="hidden-xs">
 					</div>
 
@@ -514,7 +524,7 @@
 				<div class="row">
 
 					<div class="col-md-6 col-md-offset-3 wow bounceInUp">
-						<a href="files/Le_CV2.pdf" class="btn btn-default btn-custom-2"><i class="fa fa-cloud-download icon-before"></i> Download CV</a>
+						<a href="files/minhle-resume.pdf" class="btn btn-default btn-custom-2"><i class="fa fa-cloud-download icon-before"></i> Download Resume</a>
 					</div>
 
 				</div><!-- .row -->
